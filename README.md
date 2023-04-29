@@ -196,3 +196,17 @@ list_card = create_list_card(title, subtitle, items)
 
 
 ```
+
+```bash
+curl -H "Content-Type: application/json" -X POST -d '{"title": "Basic Card", "subtitle": "This is a basic card", "text": "This is the body text of the basic card.", "image_url": "https://www.example.com/image.png", "alt_text": "Alt text for the image"}' http://localhost:8080/card/basic
+
+curl -H "Content-Type: application/json" -X POST -d '{"title": "Button Card", "subtitle": "This is a button card", "text": "This is the body text of the button card.", "button_text": "Go to example.com", "button_url": "https://www.example.com"}' http://localhost:8080/card/button
+
+curl -H "Content-Type: application/json" -X POST -d '{"title": "Confirmation Card", "subtitle": "This is a confirmation card", "text": "Are you sure you want to proceed?"}' http://localhost:8080/card/confirmation
+
+curl -H "Content-Type: application/json" -X POST -d '{"title": "Chart Card", "subtitle": "This is a chart card", "chart_type": "LINE", "data_points": {"January": 10, "February": 20, "March": 30, "April": 40, "May": 50}}' http://localhost:8080/card/chart
+
+curl -H "Content-Type: application/json" -X POST -d '{"title": "List Card", "subtitle": "This is a list card", "items": [{"text": "Item 1", "image_url": "https://www.example.com/image1.png", "image_alt_text": "Alt text for image 1"}, {"text": "Item 2", "image_url": "https://www.example.com/image2.png", "image_alt_text": "Alt text for image 2"}, {"text": "Item 3", "image_url": "https://www.example.com/image3.png", "image_alt_text": "Alt text for image 3"}]}' http://localhost:8080/card/list
+
+
+```
